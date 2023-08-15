@@ -9,6 +9,9 @@ function createWindow() {
     width: 1200,
     height: 670,
 
+    minWidth: 1200,
+    minHeight: 670,
+
     // settings here boi
     frame: false,
     titleBarStyle: 'customButtonsOnHover',
@@ -16,7 +19,8 @@ function createWindow() {
     titleBarOverlay: {
       color: '#2f3241',
       symbolColor: '#74b1be',
-      height: 30
+      height: 20,
+      width: 40
     },
 
     autoHideMenuBar: true,
