@@ -6,8 +6,18 @@ import icon from '../../resources/icon.png?asset'
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
+    width: 1200,
     height: 670,
+
+    // settings here boi
+    frame: false,
+    titleBarStyle: 'customButtonsOnHover',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#2f3241',
+      symbolColor: '#74b1be',
+      height: 30
+    },
 
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
