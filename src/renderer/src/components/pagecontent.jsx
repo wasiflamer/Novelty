@@ -1,6 +1,6 @@
 function Pagecontent() {
   return (
-    <div className="grid grid-cols-3 gap-4 m-4 justify-items-center disabledrag">
+    <div className="grid grid-cols-3 gap-4 m-4 justify-items-center disabledrag ">
       <div className="card w-96 bg-base-100 shadow-xl image-full">
         <figure>
           <img

@@ -1,11 +1,9 @@
-import Drawer from './drawer'
-
-function Navbar() {
+function Navbar({ label }) {
   return (
     <div className="navbar bg-base-200">
       <div>
-        <Drawer />
-        <a className="btn btn-ghost normal-case text-xl">Novelty</a>
+        {label}
+        <a className="btn btn-ghost normal-case text-xl disabledrag">Novelty</a>
       </div>
     </div>
   )
