@@ -1,13 +1,15 @@
+import Pagecontent from './pagecontent'
+
 function Drawer() {
   return (
-    <div className="drawer ">
+    <div className="drawer">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-start justify-start">
         {/* Page content here */}
         <label
           id="drawerbutton"
           htmlFor="my-drawer-2"
-          className="btn btn-square btn-ghost  drawer-button m-2 disabledrag"
+          className="btn btn-square btn-ghost drawer-button m-2 disabledrag"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,8 +30,7 @@ function Drawer() {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content ">
           {/* Sidebar content here */}
-
-          <ul className="menu bg-base-200 w-56 rounded-box disabledrag ">
+          <ul className="menu bg-base-200 w-56 rounded-box disabledrag">
             <li>
               <a>
                 <svg

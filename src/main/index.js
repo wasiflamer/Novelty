@@ -10,7 +10,7 @@ function createWindow() {
     height: 670,
 
     minWidth: 1200,
-    minHeight: 670,
+    minHeight: 700,
 
     // settings here boi
     frame: false,
