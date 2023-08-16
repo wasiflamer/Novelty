@@ -42,7 +42,7 @@ export default function App() {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content ">
             {/* Sidebar content here */}
-            <ul className="menu bg-base-200 w-56 rounded-box disabledrag">
+            <ul className="menu bg-base-200 w-56 rounded-box disabledrag ">
               <li>
                 <a>
                   <svg
