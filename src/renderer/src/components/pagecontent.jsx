@@ -1,3 +1,14 @@
+function onscroll() {
+
+
+ 
+
+  const [Scroll, setScroll] = useState('No')
+  setScroll('Yes')
+
+  return console.log(Scroll)
+}
+
 function Card() {
   return (
     <div className="card rounded-lg bg-base-100 shadow-xl ">
@@ -14,7 +25,13 @@ function Card() {
 
 function Pagecontent() {
   return (
-    <div className="grid grid-cols-3 gap-4 m-4 justify-items-center disabledrag ">
+    <div
+      className="grid grid-cols-3 gap-4 m-4 justify-items-center grid-flow-row-dense disabledrag z-10 "
+      onScroll={onscroll}
+    >
+      <Card />
+      <Card />
+      <Card />
       <Card />
       <Card />
       <Card />

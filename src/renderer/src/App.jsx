@@ -4,15 +4,17 @@ import Pagecontent from './components/pagecontent'
 export default function App() {
   return (
     <>
-      <div className="drawer">
+      <div className="drawer ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
-          <div className="flex flex-row">
+          {/* Page content here */}
+
+          <div className="isolate">
             <Navbar
               label={
                 <label
                   htmlFor="my-drawer-2"
-                  className="btn btn-square btn-ghost drawer-button m-2 disabledrag  "
+                  className="btn btn-square btn-ghost drawer-button m-2 disabledrag "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -30,11 +32,6 @@ export default function App() {
                 </label>
               }
             />
-          </div>
-
-          {/* Page content here */}
-
-          <div className="isolate">
             <Pagecontent />
           </div>
         </div>

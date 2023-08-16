@@ -11,6 +11,10 @@ body {
   -webkit-app-region: drag;
 }
 
+.enabledrag {
+  -webkit-app-region: drag;
+}
+
 .disabledrag {
   -webkit-app-region: none;
 }
