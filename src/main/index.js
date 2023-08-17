@@ -21,6 +21,7 @@ function createWindow() {
       symbolColor: '#74b1be',
       height: 20,
       width: 40
+      
     },
 
     autoHideMenuBar: true,
