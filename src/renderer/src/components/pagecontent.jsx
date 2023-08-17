@@ -14,7 +14,7 @@ function Card() {
 
 function Pagecontent() {
   return (
-    <div className="grid grid-cols-3 gap-6 m-4 justify-items-center grid-flow-row-dense ED ">
+    <div className=" grid grid-cols-3  gap-6 m-10 justify-items-center grid-flow-row-dense ED ">
       <Card />
       <Card />
       <Card />

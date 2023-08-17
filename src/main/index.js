@@ -15,13 +15,12 @@ function createWindow() {
     // settings here boi
     frame: false,
     titleBarStyle: 'customButtonsOnHover',
-    titleBarStyle: 'hidden',
+
     titleBarOverlay: {
       color: '#2f3241',
       symbolColor: '#74b1be',
       height: 20,
       width: 40
-      
     },
 
     autoHideMenuBar: true,
@@ -29,6 +28,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      enableRemoteModule: true,
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
@@ -86,3 +86,6 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+const { ipcMain } = require('electron')
+
+ipcMain.on('close', () => app.quit())
