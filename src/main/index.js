@@ -12,9 +12,9 @@ function createWindow() {
     minWidth: 1300,
     minHeight: 700,
 
-
     // settings here boi
     frame: false,
+    focusable: false,
     titleBarStyle: 'customButtonsOnHover',
     titleBarStyle: 'hidden',
     titleBarOverlay: {
