@@ -1,17 +1,6 @@
-function onscroll() {
-
-
- 
-
-  const [Scroll, setScroll] = useState('No')
-  setScroll('Yes')
-
-  return console.log(Scroll)
-}
-
 function Card() {
   return (
-    <div className="card rounded-lg bg-base-100 shadow-xl ">
+    <div className="card rounded-lg bg-base-100 shadow-xl disabledrag ">
       <figure>
         <img
           src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
@@ -25,10 +14,7 @@ function Card() {
 
 function Pagecontent() {
   return (
-    <div
-      className="grid grid-cols-3 gap-4 m-4 justify-items-center grid-flow-row-dense disabledrag z-10 "
-      onScroll={onscroll}
-    >
+    <div className="grid grid-cols-3 gap-4 m-4 justify-items-center grid-flow-row-dense z-10 disabledrag">
       <Card />
       <Card />
       <Card />
