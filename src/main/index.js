@@ -6,15 +6,14 @@ import icon from '../../resources/icon.png?asset'
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1200,
+    width: 1400,
     height: 670,
 
-    minWidth: 1300,
-    minHeight: 700,
+    minWidth: 1400,
+    minHeight: 670,
 
     // settings here boi
     frame: false,
-    focusable: false,
     titleBarStyle: 'customButtonsOnHover',
     titleBarStyle: 'hidden',
     titleBarOverlay: {

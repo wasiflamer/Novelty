@@ -4,41 +4,25 @@ import Pagecontent from './components/pagecontent'
 export default function App() {
   return (
     <>
-      <div className="drawer ">
+      <div className="drawer">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           {/* Page content here */}
-          <div className="isolate">
-            <Navbar
-              label={
-                <label
-                  htmlFor="my-drawer-2"
-                  className="btn btn-square btn-ghost drawer-button m-2 disabledrag "
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    className="inline-block w-5 h-5 stroke-current"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    ></path>
-                  </svg>
-                </label>
-              }
-            />
-            <Pagecontent />
+
+          <div className="flex flex-row isolate">
+            <div className="flex-col">
+              <Navbar />
+            </div>
+            <div className="flex-col">
+              <Pagecontent />
+            </div>
           </div>
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content ">
+          <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content DD ">
             {/* Sidebar content here */}
-            <ul className="menu bg-base-200 w-56 rounded-box disabledrag ">
+            <ul className="menu bg-base-200 w-56 rounded-box DD ">
               <li>
                 <a>
                   <svg

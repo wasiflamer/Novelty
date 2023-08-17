@@ -6,11 +6,11 @@ body {
   -webkit-app-region: drag;
 }
 
-.enabledrag {
+.ED {
   -webkit-app-region: drag;
 }
 
-.disabledrag {
+.DD {
   -webkit-app-region: none;
 }
 
