@@ -1,3 +1,4 @@
+import Buttonnav from './components/buttonnav'
 import Navbar from './components/navbar'
 import Pagecontent from './components/pagecontent'
 
@@ -11,6 +12,7 @@ export default function App() {
 
           <div className="flex flex-row isolate">
             <div className="flex-col">
+              <Buttonnav />
               <Navbar />
             </div>
             <div className="flex-col">

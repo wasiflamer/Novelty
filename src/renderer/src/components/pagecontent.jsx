@@ -1,6 +1,6 @@
 function Card() {
   return (
-    <div className="card rounded-lg bg-base-100 shadow-xl DD ">
+    <div className="card rounded-lg bg-base-100 shadow-xl -z-50 DD  ">
       <figure>
         <img
           src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
