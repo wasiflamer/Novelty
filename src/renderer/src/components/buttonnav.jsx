@@ -28,7 +28,7 @@ function Buttonnav() {
       <button
         className="DD btn btn-ghost bg-transparent hover:bg-inherit"
         onClick={() => {
-          ipcRenderer.send('close', [])
+          ipcRenderer.send('maximize', [])
         }}
         src={''}
       >
