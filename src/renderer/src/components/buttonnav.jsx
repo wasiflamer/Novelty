@@ -4,7 +4,7 @@ function Buttonnav() {
   return (
     <div className="navbar sticky top-2 rounded-lg mt-5 mx-2  ">
       <button
-        className="DD btn btn-ghost bg-transparent hover:bg-inherit "
+        className="DD btn btn-ghost bg-transparent  hover:bg-white "
         onClick={() => {
           ipcRenderer.send('close', [])
         }}
@@ -26,7 +26,7 @@ function Buttonnav() {
         </svg>
       </button>
       <button
-        className="DD btn btn-ghost bg-transparent hover:bg-inherit"
+        className="DD btn btn-ghost bg-transparent  hover:bg-white"
         onClick={() => {
           ipcRenderer.send('maximize', [])
         }}
@@ -48,7 +48,7 @@ function Buttonnav() {
         </svg>
       </button>
       <button
-        className="DD btn btn-ghost bg-transparent hover:bg-inherit"
+        className="DD btn btn-ghost bg-transparent hover:bg-white"
         onClick={() => {
           ipcRenderer.send('minimize', [])
         }}

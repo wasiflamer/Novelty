@@ -38,7 +38,7 @@ function B_logic() {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-8 m-10 justify-items-center grid-flow-row-dense ED ">
+      <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED ">
         {array.map((x) => (
           <Cards url={x.thumbs.large} />
         ))}
@@ -49,9 +49,9 @@ function B_logic() {
 
 function Cards({ url }) {
   return (
-    <div className="card rounded-lg bg-base-100 shadow-xl -z-50 DD ">
+    <div className="card rounded-lg shadow-md shadow-black DD ">
       <figure>
-        <img src={url} alt="img" className="w-96 h-60 rounded-lg shadow-xl " />
+        <img src={url} alt="img" className="w-96 h-60 rounded-lg shadow-xl outline-8 " />
       </figure>
     </div>
   )

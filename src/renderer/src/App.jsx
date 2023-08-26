@@ -1,3 +1,4 @@
+import Navcontrol from './components/Navcontrol'
 import Buttonnav from './components/buttonnav'
 import Navbar from './components/navbar'
 import Pagecontent from './components/pagecontent'
@@ -14,6 +15,7 @@ export default function App() {
             <div className="flex-col">
               <Buttonnav />
               <Navbar />
+              <Navcontrol />
             </div>
             <div className="flex-col">
               <Pagecontent />
