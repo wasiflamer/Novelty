@@ -1,42 +1,63 @@
-import { useState } from 'react'
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
 
-const axios = require('axios')
+const queryClient = new QueryClient()
 
-function Test() {
-  const [data, setdata] = useState([])
-
-  axios
-    .get('https://wallhaven.cc/api/v1/search?q=car', {
-      params: {}
-    })
-    .then(function (response) {
-      console.log(response.data)
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
-    .finally(function () {
-      // always executed
-    })
-
-  return <p></p>
+function Landing() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <B_logic />
+    </QueryClientProvider>
+  )
 }
 
-function Card() {
+function B_logic() {
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['repoData'],
+    queryFn: () => fetch('https://wallhaven.cc/api/v1/search?q=car').then((res) => res.json())
+  })
+
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center h-screen w-[140vh]">
+        <div className="loading loading-spinner text-secondary w-10 h-10"></div>
+      </div>
+    )
+
+  if (error)
+    return (
+      <div>
+        <p>error</p>
+      </div>
+    )
+
+  var array = []
+
+  data.data.map((all) => array.push(all))
+
+  console.log(array)
+
   return (
-    <div className="card rounded-lg bg-base-100 shadow-xl -z-50 DD  ">
+    <div>
+      <div className="grid grid-cols-3 gap-8 m-10 justify-items-center grid-flow-row-dense ED ">
+        {array.map((x) => (
+          <Cards url={x.thumbs.large} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function Cards({ url }) {
+  return (
+    <div className="card rounded-lg bg-base-100 shadow-xl -z-50 DD ">
       <figure>
-        <img src="#" alt="img" className="w-96 h-60 rounded-lg shadow-xl " />
+        <img src={url} alt="img" className="w-96 h-60 rounded-lg shadow-xl " />
       </figure>
     </div>
   )
 }
 
 function Pagecontent() {
-  return (
-    <div className=" grid grid-cols-3  gap-6 m-10 justify-items-center grid-flow-row-dense ED ">
-      <Test />
-    </div>
-  )
+  return <Landing />
 }
 export default Pagecontent

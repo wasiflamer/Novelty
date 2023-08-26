@@ -14,6 +14,11 @@ function createWindow() {
     minWidth: 1400,
     minHeight: 670,
 
+    maxHeight: 1400,
+    maxWidth: 670,
+
+    resizable: false,
+
     // settings here boi
     frame: false,
     titleBarStyle: 'customButtonsOnHover',
