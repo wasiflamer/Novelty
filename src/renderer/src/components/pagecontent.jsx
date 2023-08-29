@@ -38,21 +38,26 @@ function B_logic() {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED ">
-        {array.map((x) => (
-          <Cards url={x.thumbs.large} />
+      <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED  ">
+        {array.map((wall) => (
+          <Cards id={wall.id} thumb={wall.thumbs.large} />
         ))}
       </div>
+      s
     </div>
   )
 }
 
-function Cards({ url }) {
+function Cards({ id, thumb }) {
+  const handleClick = () => {
+    console.log(`id == ${id}`)
+  }
+
   return (
-    <div className="card rounded-lg shadow-md shadow-black DD ">
-      <figure>
-        <img src={url} alt="img" className="w-96 h-60 rounded-lg shadow-xl outline-8 " />
-      </figure>
+    <div onClick={handleClick}>
+      <div className="">
+        <img src={thumb} alt="img" className="w-96 h-60 DD" />
+      </div>
     </div>
   )
 }
