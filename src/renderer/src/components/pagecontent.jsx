@@ -38,12 +38,13 @@ function B_logic() {
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED  ">
-        {array.map((wall) => (
-          <Cards id={wall.id} thumb={wall.thumbs.large} />
-        ))}
+      <div className="">
+        <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED H-effect  ">
+          {array.map((wall) => (
+            <Cards id={wall.id} thumb={wall.thumbs.large} />
+          ))}
+        </div>
       </div>
-      s
     </div>
   )
 }
@@ -55,8 +56,8 @@ function Cards({ id, thumb }) {
 
   return (
     <div onClick={handleClick}>
-      <div className="">
-        <img src={thumb} alt="img" className="w-96 h-60 DD" />
+      <div className="H-effected DD ">
+        <img src={thumb} alt={id} className="w-96 h-60 rounded-lg shadow-2xl" />
       </div>
     </div>
   )

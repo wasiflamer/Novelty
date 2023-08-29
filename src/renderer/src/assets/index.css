@@ -31,3 +31,36 @@ body {
 
   border-radius: 25px;
 }
+
+/* -------------------------------- 
+
+💡 Styling siblings on hover
+🔗 https://codyhouse.co/nuggets/styling-siblings-on-hover
+
+-------------------------------- */
+
+.H-effect:hover .H-effected:not(:hover) {
+  filter: brightness(80%);
+  opacity: 0.75;
+}
+
+.H-effect:hover .H-effected:not(:hover)::after {
+  background-color: rgba(#000, 0.5);
+}
+
+.H-effected {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.H-effected::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0);
+  transition: 0.3s;
+}
