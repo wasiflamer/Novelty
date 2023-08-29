@@ -38,12 +38,10 @@ function B_logic() {
 
   return (
     <div>
-      <div className="">
-        <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED H-effect  ">
-          {array.map((wall) => (
-            <Cards id={wall.id} thumb={wall.thumbs.large} />
-          ))}
-        </div>
+      <div className="grid grid-cols-3 gap-6 m-10 justify-items-center grid-flow-row-dense ED H-effect ">
+        {array.map((wall) => (
+          <Cards id={wall.id} thumb={wall.thumbs.large} />
+        ))}
       </div>
     </div>
   )
