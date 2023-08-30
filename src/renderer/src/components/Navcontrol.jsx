@@ -1,3 +1,25 @@
+import { useState } from 'react'
+
+import {
+  Slider,
+  Sketch,
+  Material,
+  Colorful,
+  Compact,
+  Circle,
+  Wheel,
+  Block,
+  Github,
+  Chrome
+} from '@uiw/react-color'
+import { Alpha, Hue, ShadeSlider, Saturation, hsvaToHslaString } from '@uiw/react-color'
+import { EditableInput, EditableInputRGBA, EditableInputHSLA } from '@uiw/react-color'
+
+function Demo() {
+  const [hex, setHex] = useState('#fff')
+  return <Github color="#24242424" />
+}
+
 function Searchbar() {
   return (
     <div className="form-control">
@@ -53,9 +75,7 @@ function Navcontrol() {
         </div>
         <div className="btn btn-ghost">Colors</div>
         <div className=" flex flex-row">
-          <div className="card bg-primary text-primary-content">
-            <div className="card-body"></div>
-          </div>
+          <Demo />
         </div>
 
         <div className="btn btn-ghost">Purity</div>
