@@ -25,8 +25,8 @@ function B_logic() {
 
   if (error)
     return (
-      <div>
-        <p>error</p>
+      <div className="flex justify-center items-center h-screen w-[140vh]">
+        <div className="loading loading-spinner text-error w-10 h-10"></div>
       </div>
     )
 

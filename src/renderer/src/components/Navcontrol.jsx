@@ -1,23 +1,22 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Github from '@uiw/react-color-github'
 
-import {
-  Slider,
-  Sketch,
-  Material,
-  Colorful,
-  Compact,
-  Circle,
-  Wheel,
-  Block,
-  Github,
-  Chrome
-} from '@uiw/react-color'
-import { Alpha, Hue, ShadeSlider, Saturation, hsvaToHslaString } from '@uiw/react-color'
-import { EditableInput, EditableInputRGBA, EditableInputHSLA } from '@uiw/react-color'
-
-function Demo() {
+function Color_choose() {
   const [hex, setHex] = useState('#fff')
-  return <Github color="#24242424" />
+  return (
+    <>
+      <Github
+        color={hex}
+        style={{
+          '--github-background-color': '#242424'
+        }}
+        className="DD"
+        onChange={(color) => {
+          setHex(color.hex)
+        }}
+      />
+    </>
+  )
 }
 
 function Searchbar() {
@@ -49,36 +48,44 @@ function Searchbar() {
 function Navcontrol() {
   return (
     <div className="mt-5 ml-2 DD text-white fixed top-50 z-20">
-      <div className="flex justify-center items-start flex-col">
+      <div className="flex justify-center items-start flex-col ED">
         <div className="btn btn-ghost hover:bg-inherit my-2">Catagory</div>
         <div className=" flex flex-row">
           <div className="join">
             <input
-              className="join-item btn btn-secondary"
+              className="join-item btn btn-secondary DD"
               type="radio"
               name="options"
               aria-label="General"
             />
             <input
-              className="join-item btn btn-secondary "
+              className="join-item btn btn-secondary DD"
               type="radio"
               name="options"
               aria-label="Anime"
             />
             <input
-              className="join-item btn btn-secondary"
+              className="join-item btn btn-secondary DD"
               type="radio"
               name="options"
               aria-label="People"
             />
           </div>
         </div>
-        <div className="btn btn-ghost">Colors</div>
-        <div className=" flex flex-row">
-          <Demo />
+        <div className="btn btn-ghost hover:bg-inherit my-2">Colors</div>
+        <div className=" flex flex-col">
+          <Color_choose />
         </div>
 
-        <div className="btn btn-ghost">Purity</div>
+        <div className="btn btn-ghost hover:bg-inherit my-2 ED">Purity</div>
+        <div className=" flex flex-col">
+          <div className="form-control w-52 mx-4">
+            <label className="cursor-pointer label">
+              <span className="label-text">NSFW</span>
+              <input type="checkbox" className="toggle toggle-primary DD" unchecked />
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   )
