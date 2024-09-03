@@ -2,7 +2,7 @@ const { ipcRenderer } = window.require('electron')
 
 function Buttonnav() {
   return (
-    <div className="navbar sticky top-2 rounded-lg mt-5 mx-2  ">
+    <div className="navbar sticky top-2 rounded-lg mt-5 mx-4  ">
       <button
         className="DD btn btn-ghost bg-transparent  hover:bg-white "
         onClick={() => {

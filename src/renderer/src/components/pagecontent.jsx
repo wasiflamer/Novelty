@@ -13,7 +13,7 @@ function Landing() {
 function B_logic() {
   const { isLoading, error, data } = useQuery({
     queryKey: ['repoData'],
-    queryFn: () => fetch('https://wallhaven.cc/api/v1/search?q=car').then((res) => res.json())
+    queryFn: () => fetch('https://wallhaven.cc/api/v1/search?q=wolverine').then((res) => res.json())
   })
 
   if (isLoading)

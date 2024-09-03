@@ -47,7 +47,7 @@ function Searchbar() {
 
 function Navcontrol() {
   return (
-    <div className="mt-5 ml-2 DD text-white fixed top-50 z-20">
+    <div className="mt-5 DD text-white fixed top-50 z-20 ml-4">
       <div className="flex justify-center items-start flex-col ED">
         <div className="btn btn-ghost hover:bg-inherit my-2">Catagory</div>
         <div className=" flex flex-row">
